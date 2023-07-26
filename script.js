@@ -10,7 +10,7 @@ const resetButton = document.querySelector('#reset');
 let monthsValue;
 
 
-const endingDate = [];
+let endingDate = [];
 function getFromLocalStorage() {
     let  endDateValue= localStorage.getItem('endDateValue');
     if (endDateValue) {
