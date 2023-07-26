@@ -11,24 +11,24 @@
     <div class="mt-4 flex flex-col items-center justify-center h-screen text-slate-50">
     <h1 class="text-2xl font-bold md:text-3xl lg:text-4xl">ZoidPay Staking Countdown</h1>
     <form action="">
-    <p class="font-bold mt-4">Select Date:</p> <input placeholder="Enter Date and Time" type="datetime-local" name="datetime" id="datetime" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 hover:cursor-pointer"> <br>
+    <p class="font-bold mt-4">Select Date & Time:</p> <input placeholder="Enter Date and Time" type="datetime-local" name="datetime" id="datetime" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 hover:cursor-pointer"> <br>
     <p class="font-bold">Select Number of Months:</p><input type="number" name="number" id="monthselector" min="1" max="12" maxlength="2" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"><br>
 
     <button id="submitbutton" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" >Calculate</button> 
     <button id="reset" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Reset</button>
     </form>
     <h2 class="font-bold">Your Stake Unlocks In:</h2>
-    <div class="flex text-2xl md:text-3xl lg:text-4xl uppercase p-4 ml-4 font-bold" id="timecontainer">
-    <div id="displaydays" class="p-1 ml-4">
+    <div class="flex text-center text-lg md:text-3xl lg:text-4xl uppercase p-4 ml-4 font-bold" id="timecontainer">
+    <div id="displaydays" class="p-1 ml-2">
    
     </div>
-    <div id="displayhours" class="p-1 ml-4">
+    <div id="displayhours" class="p-1 ml-2">
    
     </div>
-    <div id="displayminutes" class="p-1 ml-4">
+    <div id="displayminutes" class="p-1 ml-2">
    
     </div>
-<div id="displayseconds" class="p-1 ml-4">
+<div id="displayseconds" class="p-1 ml-2">
 
 
 </div>
