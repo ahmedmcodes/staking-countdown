@@ -40,8 +40,8 @@ function getFromLocalStorage() {
     if (endDateValue){
     let finalDate =  new Date (endingDate[1]);
     finalDate.setMonth(finalDate.getMonth() + endingDate[0]);
-    // finalDate.setHours(finalDate.getHours() + 12);
-    finalDate.setMinutes(finalDate.getMinutes() + 1)
+    finalDate.setHours(finalDate.getHours() + 12);
+    // finalDate.setMinutes(finalDate.getMinutes() + 1)
     finalDate = finalDate.getTime();
     let currentDate = new Date().getTime();
     let calculateDiff = finalDate - currentDate;
@@ -69,7 +69,8 @@ function calculateTime(event){
    let dateValue = parseInt(dateInput.value);
    monthsValue = parseInt(numberOfMonths.value);
    if ((monthsValue === 1 || monthsValue === 3 || monthsValue === 6 || monthsValue === 12) && dateValue > 0){
-        endingDate[0] = 0;
+    // endingDate[0] = monthsValue;
+    endingDate[0] = monthsValue;
         endingDate[1] = dateInput.value
         addToLocalStorage() 
         numberOfMonths.value = '' 
@@ -93,9 +94,9 @@ function showCountDown(){
     if (monthsValue === 1 || monthsValue === 3 || monthsValue === 6 || monthsValue === 12){
     let initialDate = new Date ().getTime();
     let endDate =  new Date (dateInput.value);
-    endDate.setMonth(endDate.getMonth() + 0);
-    // endDate.setHours(endDate.getHours() + 12);
-    endDate.setMinutes(endDate.getMinutes() + 1)
+    endDate.setMonth(endDate.getMonth() + monthsValue);
+    endDate.setHours(endDate.getHours() + 12);
+    // endDate.setMinutes(endDate.getMinutes() + 1)
     endDate = endDate.getTime();
     let targetDate = endDate - initialDate;  
     let daysRemaining = Math.floor((targetDate / (1000*60*60*24)));
