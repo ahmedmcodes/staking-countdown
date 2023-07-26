@@ -39,7 +39,10 @@ function getFromLocalStorage() {
     let hoursRemaining = Math.floor((calculateDiff % (1000* 60 * 60 * 24) / (1000 *60 * 60)));
     let minutesRemaining = Math.floor((calculateDiff % (1000 * 60 * 60) /(1000 * 60)) );
     let secondsRemaining = Math.floor((calculateDiff % (1000 * 60) / 1000 ));
-    timeContainer.innerHTML = daysRemaining + " Days " + hoursRemaining + " Hours " + minutesRemaining + " Minutes " + secondsRemaining + " Seconds ";
+    timeContainer.innerHTML = daysRemaining + " Days ";
+    hoursContainer.innerHTML = ` ${hoursRemaining}   Hours `;
+    minutesContainer.innerHTML=  minutesRemaining + " Minutes ";  
+    secondsContainer.innerHTML = secondsRemaining + " Seconds";
     if (calculateDiff < 0){
         timeContainer.innerHTML = "Your staking period has ended, please go to the staking website and claim your tokens or restake!"
         clearInterval(countdownInterval)
